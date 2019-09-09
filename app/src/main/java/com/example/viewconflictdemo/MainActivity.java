@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         boolean result = false;
-        System.out.println(Utils.getActionName(event) + ", Activity.onTouchEvent" + result);
+        System.out.println(Utils.getActionName(event) + ", Activity.onTouchEvent = " + result);
         return result;
     }
 }

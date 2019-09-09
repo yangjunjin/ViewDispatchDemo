@@ -32,5 +32,4 @@ public class ViewGroupA extends LinearLayout {
 		System.out.println(Utils.getActionName(event) + ", ViewGroupA.onTouchEvent = " + result);
 		return result;
 	}
-
 }
