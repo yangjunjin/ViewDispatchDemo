@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean dispatchTouchEvent(MotionEvent ev) {
         System.out.println("---------------------------------------------");
-        System.out.println(Utils.getActionName(ev) + ", Activity.dispatch1");
+        System.out.println(Utils.getActionName(ev) + ", Activity.dispatch");
 //        boolean result = super.dispatchTouchEvent(ev);
 //        System.out.println(Utils.getActionName(ev) + ", Activity.dispatch2 = " + result);
         return super.dispatchTouchEvent(ev);
