@@ -3,29 +3,28 @@ package com.example.viewconflictdemo;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.widget.TextView;
 
 @SuppressLint("AppCompatCustomView")
 public class ViewC extends TextView {
+    private String TAG = "TAG=";
 
-	public ViewC(Context context, AttributeSet attrs) {
-		super(context, attrs);
-	}
+    public ViewC(Context context, AttributeSet attrs) {
+        super(context, attrs);
+    }
 
-	@Override
-	public boolean dispatchTouchEvent(MotionEvent ev) {
-		System.out.println(Utils.getActionName(ev) + ", ViewC.dispatchTouchEvent");
-		boolean result = super.dispatchTouchEvent(ev);
-		System.out.println(Utils.getActionName(ev) + ", ViewC.dispatchTouchEvent = " + result);
-		return result;
-	}
-	
-	@Override
-	public boolean onTouchEvent(MotionEvent event) {
-		boolean result = false;
-		System.out.println(Utils.getActionName(event) + ", ViewC.onTouchEvent = " + result);
-		return result;
-	}
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent ev) {
+        Log.e(TAG, Utils.getActionName(ev) + ", ViewC.dispatchTouchEvent");
+        return super.dispatchTouchEvent(ev);
+    }
 
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        Log.e(TAG, Utils.getActionName(event) + ", ViewC.onTouchEvent");
+//        return super.onTouchEvent(event);
+        return false;
+    }
 }

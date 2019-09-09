@@ -2,35 +2,29 @@ package com.example.viewconflictdemo;
 
 import android.content.Context;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.widget.LinearLayout;
 
 public class ViewGroupB extends LinearLayout {
-
+	private String TAG = "TAG=";
 	public ViewGroupB(Context context, AttributeSet attrs) {
 		super(context, attrs);
 	}
 
 	@Override
 	public boolean dispatchTouchEvent(MotionEvent ev) {
-		System.out.println(Utils.getActionName(ev) + ", ViewGroupB.dispatchTouchEvent");
-		boolean result = super.dispatchTouchEvent(ev);
-		System.out.println(Utils.getActionName(ev) + ", ViewGroupB.dispatchTouchEvent = " + result);
-		return result;
+		Log.e(TAG,Utils.getActionName(ev) + ", ViewGroupB.dispatchTouchEvent");
+		return super.dispatchTouchEvent(ev);
 	}
-	
 	@Override
 	public boolean onInterceptTouchEvent(MotionEvent ev) {
-		boolean result = false;
-		System.out.println(Utils.getActionName(ev) + ", ViewGroupB.onInterceptTouchEvent = " + result);
-		return result;
+		Log.e(TAG,Utils.getActionName(ev) + ", ViewGroupB.onInterceptTouchEvent");
+		return super.onInterceptTouchEvent(ev);
 	}
-	
 	@Override
 	public boolean onTouchEvent(MotionEvent event) {
-		boolean result = false;
-		System.out.println(Utils.getActionName(event) + ", ViewGroupB.onTouchEvent = " + result);
-		return result;
+		Log.e(TAG,Utils.getActionName(event) + ", ViewGroupB.onTouchEvent");
+		return super.onTouchEvent(event);
 	}
-
 }
