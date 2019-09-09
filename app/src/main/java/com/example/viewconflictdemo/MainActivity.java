@@ -16,16 +16,16 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean dispatchTouchEvent(MotionEvent ev) {
         System.out.println("---------------------------------------------");
-        System.out.println(Utils.getActionName(ev) + ", Activity.dispatch");
-//        boolean result = super.dispatchTouchEvent(ev);
-//        System.out.println(Utils.getActionName(ev) + ", Activity.dispatch2 = " + result);
+        System.out.println(Utils.getActionName(ev) + ", Activity.dispatchTouchEvent");
+        boolean result = super.dispatchTouchEvent(ev);
+        System.out.println(Utils.getActionName(ev) + ", Activity.dispatchTouchEvent = " + result);
         return super.dispatchTouchEvent(ev);
     }
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         boolean result = false;
-        System.out.println(Utils.getActionName(event) + ", Activity.touch2 = " + result);
+        System.out.println(Utils.getActionName(event) + ", Activity.onTouchEvent" + result);
         return result;
     }
 }

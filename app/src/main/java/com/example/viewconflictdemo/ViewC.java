@@ -15,16 +15,16 @@ public class ViewC extends TextView {
 
 	@Override
 	public boolean dispatchTouchEvent(MotionEvent ev) {
-		System.out.println(Utils.getActionName(ev) + ", ViewC.dispatch");
+		System.out.println(Utils.getActionName(ev) + ", ViewC.dispatchTouchEvent");
 		boolean result = super.dispatchTouchEvent(ev);
-		System.out.println(Utils.getActionName(ev) + ", ViewC.dispatch = " + result);
+		System.out.println(Utils.getActionName(ev) + ", ViewC.dispatchTouchEvent = " + result);
 		return result;
 	}
 	
 	@Override
 	public boolean onTouchEvent(MotionEvent event) {
 		boolean result = false;
-		System.out.println(Utils.getActionName(event) + ", ViewC.touch = " + result);
+		System.out.println(Utils.getActionName(event) + ", ViewC.onTouchEvent = " + result);
 		return result;
 	}
 

@@ -13,23 +13,23 @@ public class ViewGroupB extends LinearLayout {
 
 	@Override
 	public boolean dispatchTouchEvent(MotionEvent ev) {
-		System.out.println(Utils.getActionName(ev) + ", ViewGroupB.dispatch");
+		System.out.println(Utils.getActionName(ev) + ", ViewGroupB.dispatchTouchEvent");
 		boolean result = super.dispatchTouchEvent(ev);
-		System.out.println(Utils.getActionName(ev) + ", ViewGroupB.dispatch = " + result);
+		System.out.println(Utils.getActionName(ev) + ", ViewGroupB.dispatchTouchEvent = " + result);
 		return result;
 	}
 	
 	@Override
 	public boolean onInterceptTouchEvent(MotionEvent ev) {
 		boolean result = false;
-		System.out.println(Utils.getActionName(ev) + ", ViewGroupB.intercept = " + result);
+		System.out.println(Utils.getActionName(ev) + ", ViewGroupB.onInterceptTouchEvent = " + result);
 		return result;
 	}
 	
 	@Override
 	public boolean onTouchEvent(MotionEvent event) {
 		boolean result = false;
-		System.out.println(Utils.getActionName(event) + ", ViewGroupB.touch = " + result);
+		System.out.println(Utils.getActionName(event) + ", ViewGroupB.onTouchEvent = " + result);
 		return result;
 	}
 
