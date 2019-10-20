@@ -1,32 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.example.viewconflictdemo.ViewGroupA xmlns:android="http://schemas.android.com/apk/res/android"
+<com.example.viewconflictdemo.MyLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#cececece"
     android:gravity="center"
     tools:context=".MainActivity">
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:background="@color/colorAccent"/>
 
-    <com.example.viewconflictdemo.ViewGroupB
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:background="#eded"
-        android:gravity="center">
-
-        <com.example.viewconflictdemo.ViewC
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_gravity="center"
-            android:background="#99ffeef0"
-            android:gravity="center"
-            android:padding="10dp"
-            android:text="View"
-            android:textColor="@android:color/white"
-            android:textSize="20sp"
-            android:textStyle="bold">
-
-        </com.example.viewconflictdemo.ViewC>
-
-    </com.example.viewconflictdemo.ViewGroupB>
-
-</com.example.viewconflictdemo.ViewGroupA>
+</com.example.viewconflictdemo.MyLinearLayout>
